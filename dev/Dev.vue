@@ -35,7 +35,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator'
 import validing, { isPhoneNumber, isNumber } from '../src/index'
 import { ElForm } from 'element-ui/types/form'
 
-// import validing from 'validing'
+// import validing, { isPhoneNumber } from 'validing'
 
 @Component({
   name: 'Dev'

@@ -1,5 +1,7 @@
-import { Vue } from 'vue-property-decorator'
-
+/**
+ * validing插件
+ * 作者：15524261@qq.com
+ */
 declare module validing {
   /**
    * rules of element-ui
@@ -28,6 +30,9 @@ declare module validing {
        **/
       name ? : string;
     }
+    /**
+     * 验证电话号码
+     */
     export function validatePhone(config: PhoneConfig): any;
 
     /**
@@ -65,6 +70,9 @@ declare module validing {
        **/
       name ? : string;
     }
+    /**
+     * 验证数字或金额
+     */
     export function validateNumber(config: NumberConfig): any;
 
     /**
@@ -83,6 +91,9 @@ declare module validing {
        **/
       name ? : string;
     }
+    /**
+     * 验证首尾是否含有空格
+     */
     export function validateSpace(config: SpaceConfig): any;
 
     /**
@@ -105,7 +116,10 @@ declare module validing {
        **/
       name ? : string;
     }
-    export function validateWebsite(config: SpaceConfig): any;
+    /**
+     * 验证是否有效网址
+     */
+    export function validateWebsite(config: WebsiteConfig): any;
   }
 
   /** 是否布尔值 */
@@ -129,3 +143,22 @@ declare module validing {
 }
 
 export default validing
+
+/** 是否布尔值 */
+export declare function isBooblean(value: any): boolean
+/** 是否字符串 */
+export declare function isString(value: any): boolean
+/** 是否数字 */
+export declare function isNumber(value: any): boolean
+/** 是否含有有效值 */
+export declare function isHaveValue(value: any): boolean
+/** 是否手机号码 */
+export declare function isPhoneNumber(value: any): boolean
+/** 是否有效的数字区间 */
+export declare function isRangeNumber(value: any): boolean
+/** 验证小数位数 */
+export declare function isDecimal(value: any, length: number): boolean
+/** 是否某个字符串开头 */
+export declare function isStartStr(value: any, str: string): boolean
+/** 是否某个字符串结尾 */
+export declare function isEndStr(value: any, str: string): boolean

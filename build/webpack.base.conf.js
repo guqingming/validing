@@ -53,8 +53,7 @@ module.exports = {
         use: [
           extractOrInjectStyles,
           'css-loader',
-          'postcss-loader',
-          'sass-loader'
+          'postcss-loader'
         ]
       },
       {

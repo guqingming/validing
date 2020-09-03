@@ -1,5 +1,6 @@
 import { isBooblean, isString, isHaveValue, isArray, isStartStr } from './validate'
 import { getValueObject } from './function'
+import validing from 'dist/validing'
 
 const defaultConfig: validing.rules.WebsiteConfig = {
   required: false,

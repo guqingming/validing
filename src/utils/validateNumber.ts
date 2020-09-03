@@ -1,5 +1,6 @@
 import { isHaveValue, isBooblean, isString, isRangeNumber, isDecimal, isNumber } from './validate'
 import { getValueObject } from './function'
+import validing from 'dist/validing'
 
 const defaultConfig: validing.rules.NumberConfig = {
   required: false,

@@ -4,7 +4,7 @@ import validateSpace from './utils/validateSpace'
 import validateWebsite from './utils/validateWebsite'
 import { isBooblean, isString, isHaveValue, isPhoneNumber, isNumber, isArray, isRangeNumber, isDecimal, isStartStr, isEndStr } from './utils/validate'
 
-const validing = {
+const Validing = {
   rules: {
     validatePhone,
     validateNumber,
@@ -23,7 +23,8 @@ const validing = {
   isEndStr
 }
 
-export default validing
+export default Validing
+
 export {
   isBooblean,
   isString,

@@ -1,5 +1,6 @@
 import { isPhoneNumber, isHaveValue, isFixedNumber, isBooblean, isString } from './validate'
 import { getValueObject } from './function'
+import validing from 'dist/validing'
 
 const defaultConfig: validing.rules.PhoneConfig = {
   required: false,
