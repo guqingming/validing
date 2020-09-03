@@ -20,7 +20,7 @@ export function isArray(value: any) {
 }
 
 /**
- * 是否有效值
+ * 是否含有有效值
  */
 export function isHaveValue(value: any): boolean {
   if (typeof value === 'undefined' || value === null || (typeof value === 'string' && value.trim() === '')) {
@@ -67,7 +67,7 @@ export function isHaveSpace(value: any): boolean {
 /**
  * 验证小数位数
  */
-export function isDecimal(value: any, length: number): boolean {
+export function isDecimal(value: any, length = 2): boolean {
   return new RegExp(`^-?\\d+\.\\d{${ length }}$`).test(value)
 }
 

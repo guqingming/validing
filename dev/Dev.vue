@@ -95,7 +95,7 @@ export default class extends Vue {
   private handleSubmit() {
     (this.$refs.form as ElForm).validate(async valid => {
       if (valid) {
-    console.log('submit');
+        console.log('submit')
       }
     })
   }

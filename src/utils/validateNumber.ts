@@ -3,7 +3,7 @@ import { getValueObject } from './function'
 
 const defaultConfig: validing.rules.NumberConfig = {
   required: false,
-  range: '[0,]',
+  range: '[0,-]',
   decimal: 0,
   strict: false,
   name: '此项'

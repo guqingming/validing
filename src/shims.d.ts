@@ -130,4 +130,23 @@ declare module validing {
     }
     export function validateWebsite(config: SpaceConfig): any;
   }
+
+  /** 是否布尔值 */
+  function isBooblean(value: any): boolean
+  /** 是否字符串 */
+  function isString(value: any): boolean
+  /** 是否数字 */
+  function isNumber(value: any): boolean
+  /** 是否含有有效值 */
+  function isHaveValue(value: any): boolean
+  /** 是否手机号码 */
+  function isPhoneNumber(value: any): boolean
+  /** 是否有效的数字区间 */
+  function isRangeNumber(value: any): boolean
+  /** 验证小数位数 */
+  function isDecimal(value: any, length: number): boolean
+  /** 是否某个字符串开头 */
+  function isStartStr(value: any, str: string): boolean
+  /** 是否某个字符串结尾 */
+  function isEndStr(value: any, str: string): boolean
 }
