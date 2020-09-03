@@ -44,7 +44,7 @@ validing.isNumber('2.')
 | isEndStr | 是否某个字符串结尾 | value 验证值<br>str 字符串 | Boolean  |
 | isEmail | 是否邮箱 | value 验证值 | Boolean  |
 | isPostcode | 是否邮编 | value 验证值 | Boolean  |
-| isIDCardNo | 是否身份证号码 | value 验证值<br>type 类型 0 一代或二代|1 一代|2 二代 默认值0 | Boolean  |
+| isIDCardNo | 是否身份证号码 | value 验证值<br>type 类型<br>    0 一代或二代<br>    1 一代<br>    2 二代(默认值) |Boolean|
 
 ## el-form中rules使用方法，遵循element-ui中使用规格
 
@@ -94,12 +94,12 @@ rules = {
 | 方法 | 方法释义 | 配置参数 | 参数释义 | 可选值 | 默认值 |
 | ------------- | ------------ | -------- | ------------ | ----------------------------------------- | ------ |
 | validatePhone | 验证电话号码 | required | 是否必填 | Boolean | false |
-| | | type | 电话号码类型 | Number<br>0 手机号码or座机号码 <br>1 手机号码<br>2 座机号码 | 0 |
+| | | type | 电话号码类型 | Number<br>    0 手机号码or座机号码 <br>    1 手机号码<br>    2 座机号码 | 0 |
 | | | name | 字段名称 | String | 此项 |
 | validateNumber | 验证数字 | required | 是否必填 | Boolean | false |
-| | | range | 数字区间 | String<br>格式如[0,-]<br>[]代表包含此数字，()代表不包含此数字，-代表不限制<br>小数在前，大数在后 | [0,-] |
+| | | range | 数字区间 | String<br>    格式如[0,-]<br>    []代表包含此数字，()代表不包含此数字，-代表不限制<br>    小数在前，大数在后 | [0,-] |
 | | | decimal | 小数的位数 | Number | 0 |
-| | | strict | 小数是否严格模式 | Boolean<br>非严格模式时整数不做小数位数校验 | false |
+| | | strict | 小数是否严格模式 | Boolean<br>    非严格模式时整数不做小数位数校验 | false |
 | | | name | 字段名称 | String | 此项 |
 | validateSpace | 验证首尾是否含有空格 | required | 是否必填 | Boolean | false |
 | | | name | 字段名称 | String | 此项 |
@@ -112,5 +112,6 @@ rules = {
 | validatePostcode | 验证邮编 | required | 是否必填 | Boolean | false |
 | | | name | 字段名称 | String | 此项 |
 | validateIDCardNo | 验证身份证号码 | required | 是否必填 | Boolean | false |
-| | | type | 身份证号码类型 | Number<br>0 1代或2代<br>1 1代<br>2 2代 | 0 |
+| | | type | 身份证号码类型 | Number<br>    0 一代或二代<br>    1 一代<br>    2 二代 | 0 |
 | | | name | 字段名称 | String | 此项 |
+
