@@ -84,3 +84,11 @@ export function isStartStr(value: any, str: string): boolean {
 export function isEndStr(value: any, str: string): boolean {
   return new RegExp(`${ str }$`).test(value)
 }
+
+/**
+ * 验证邮箱
+ */
+export function isEmail(email: string): boolean {
+  const re = /^(([^<>()\\[\]\\.,;:\s@"]+(\.[^<>()\\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  return re.test(email)
+}

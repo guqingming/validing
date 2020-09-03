@@ -42,6 +42,7 @@ validing.isNumber('2.')
 | isRangeNumber | 是否有效的数字区间 | value 验证值 | Boolean  |
 | isStartStr | 是否某个字符串开头 | value 验证值<br>str 字符串 | Boolean  |
 | isEndStr | 是否某个字符串结尾 | value 验证值<br>str 字符串 | Boolean  |
+| isEmail | 是否邮箱 | value 验证值 | Boolean  |
 
 ## el-form中rules使用方法，遵循element-ui中使用规格
 
@@ -102,4 +103,7 @@ rules = {
 | | | name | 字段名称 | String | 此项 |
 | validateWebsite | 验证是否有效网址 | required | 是否必填 | Boolean | false |
 | | | protocols | 允许的网站协议 | Array | ['http', 'https', 'ftp', 'sftp', 'mailto', 'tel'] |
+| | | name | 字段名称 | String | 此项 |
+| validateMail | 验证邮箱 | required | 是否必填 | Boolean | false |
+| | | maxLength | 字符的最大长度 | Number | 60 |
 | | | name | 字段名称 | String | 此项 |
