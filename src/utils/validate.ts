@@ -99,3 +99,18 @@ export function isEmail(value: string): boolean {
 export function isPostcode(value: string): boolean {
   return /^\d{6}$/.test(value)
 }
+
+/**
+ * 验证身份证号码
+ */
+export function isIDCardNo(value: string, type = 0): boolean {
+  switch (type) {
+    case 0:
+    default:
+      return /^(\d{15}$|^\d{18}$|^\d{17}(\d|X|x))$/.test(value)
+    case 1:
+      return /^\d{15}$/.test(value)
+    case 2:
+      return /^(^\d{18}$|^\d{17}(\d|X|x))$/.test(value)
+  }
+}

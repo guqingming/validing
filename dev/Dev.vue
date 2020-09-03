@@ -54,8 +54,7 @@ export default class extends Vue {
     tel: [
       { validator: validing.rules.validatePhone(
         {
-          required: true,
-          name: undefined
+          required: true
         }
       ), trigger: 'blur' }
     ],

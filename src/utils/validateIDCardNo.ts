@@ -1,23 +1,23 @@
-import { isPhoneNumber, isHaveValue, isFixedNumber, isBooblean, isString } from './validate'
+import { isBooblean, isString, isHaveValue, isIDCardNo } from './validate'
 import { getValueObject } from './function'
 import validing from 'dist/validing'
 
-const defaultConfig: validing.rules.PhoneConfig = {
+const defaultConfig: validing.rules.IDCardNoConfig = {
   required: false,
   type: 0,
   name: '此项'
 }
 
-const validatePhone = (config: validing.rules.PhoneConfig) => {
+const validateIDCardNo = (config: validing.rules.IDCardNoConfig) => {
   try {
     if (config.required !== undefined && !isBooblean(config.required)) {
-      throw Error('validatePhone函数required参数必须为布尔值')
+      throw Error('validateIDCardNo函数required参数必须为布尔值')
     }
     if (config.type !== undefined && config.type !== 0 && config.type !== 1 && config.type !== 2) {
-      throw Error('validatePhone函数type参数只能是1|2|3')
+      throw Error('validateIDCardNo函数type参数只能是0|1|2')
     }
     if (config.name !== undefined && !isString(config.name)) {
-      throw Error('validatePhone函数name参数只能是字符串')
+      throw Error('validateIDCardNo函数name参数只能是字符串')
     }
   } catch (error) {
     console.error(error.message)
@@ -34,13 +34,10 @@ const validatePhone = (config: validing.rules.PhoneConfig) => {
     } else if (!isHaveValue(value)) {
       callback(new Error(`${ theConfig.name }必填`))
       return
-    } else if (!isPhoneNumber(value) && theConfig.type === 1) {
-      callback(new Error(`${ theConfig.name }格式错误`))
+    } else if (!isHaveValue(value)) {
+      callback(new Error(`${ theConfig.name }必填`))
       return
-    } else if (!isFixedNumber(value) && theConfig.type === 2) {
-      callback(new Error(`${ theConfig.name }格式错误`))
-      return
-    } else if (!isPhoneNumber(value) && !isFixedNumber(value) && theConfig.type === 0) {
+    } else if (!(isIDCardNo(value, theConfig.type))) {
       callback(new Error(`${ theConfig.name }格式错误`))
       return
     } else {
@@ -49,4 +46,4 @@ const validatePhone = (config: validing.rules.PhoneConfig) => {
   }
 }
 
-export default validatePhone
+export default validateIDCardNo

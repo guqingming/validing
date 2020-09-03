@@ -4,7 +4,8 @@ import validateSpace from './utils/validateSpace'
 import validateWebsite from './utils/validateWebsite'
 import validateMail from './utils/validateMail'
 import validatePostcode from './utils/validatePostcode'
-import { isBooblean, isString, isHaveValue, isPhoneNumber, isNumber, isArray, isRangeNumber, isDecimal, isStartStr, isEndStr, isEmail, isPostcode } from './utils/validate'
+import validateIDCardNo from './utils/validateIDCardNo'
+import { isBooblean, isString, isHaveValue, isPhoneNumber, isNumber, isArray, isRangeNumber, isDecimal, isStartStr, isEndStr, isEmail, isPostcode, isIDCardNo } from './utils/validate'
 
 const Validing = {
   rules: {
@@ -13,7 +14,8 @@ const Validing = {
     validateSpace,
     validateWebsite,
     validateMail,
-    validatePostcode
+    validatePostcode,
+    validateIDCardNo
   },
   isBooblean,
   isString,
@@ -26,7 +28,8 @@ const Validing = {
   isStartStr,
   isEndStr,
   isEmail,
-  isPostcode
+  isPostcode,
+  isIDCardNo
 }
 
 export default Validing
@@ -43,5 +46,6 @@ export {
   isStartStr,
   isEndStr,
   isEmail,
-  isPostcode
+  isPostcode,
+  isIDCardNo
 }

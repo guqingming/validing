@@ -23,7 +23,7 @@ declare module validing {
        * 2 座机号码；
        * 3 手机号码or座机号码(默认)
        **/
-      type ? : 1 | 2 | 3;
+      type ? : 0 | 1 | 2;
       /** 
        * 字段名称：
        * 此项(默认)
@@ -166,6 +166,34 @@ declare module validing {
      * 验证邮政编码
      */
     export function validatePostcode(config: PostcodeConfig): any;
+
+    /**
+     * 验证身份证号码
+     */
+    export interface IDCardNoConfig {
+      /** 
+       * 是否必填：
+       * true 是；
+       * false 否(默认)
+       **/
+      required ? : boolean;
+      /** 
+       * 身份证号码类型：
+       * 1 1代15位；
+       * 2 2代18位；
+       * 3 1代or2代(默认)
+       **/
+      type ? : 0 | 1 | 2;
+      /** 
+       * 字段名称：
+       * 此项(默认)
+       **/
+      name ? : string;
+    }
+    /**
+     * 验证身份证号码
+     */
+    export function validateIDCardNo(config: IDCardNoConfig): any;
   }
 
   /** 是否布尔值 */
@@ -190,6 +218,8 @@ declare module validing {
   function isEmail(value: any): boolean
   /** 是否邮编 */
   function isPostcode(value: any): boolean
+  /** 是否身份证号码 */
+  function isIDCardNo(value: any): boolean
 }
 
 export default validing
@@ -216,3 +246,5 @@ export declare function isEndStr(value: any, str: string): boolean
 export declare function isEmail(value: any): boolean
 /** 是否邮编 */
 export declare function isPostcode(value: any): boolean
+/** 是否身份证号码 */
+export declare function isIDCardNo(value: any): boolean
