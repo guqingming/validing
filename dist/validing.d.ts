@@ -142,9 +142,30 @@ declare module validing {
       name ? : string;
     }
     /**
-     * 验证是否有效网址
+     * 验证邮箱地址
      */
     export function validateMail(config: MailConfig): any;
+
+    /**
+     * 验证邮政编码
+     */
+    export interface PostcodeConfig {
+      /** 
+       * 是否必填：
+       * true 是；
+       * false 否(默认)
+       **/
+      required ? : boolean;
+      /** 
+       * 字段名称：
+       * 此项(默认)
+       **/
+      name ? : string;
+    }
+    /**
+     * 验证邮政编码
+     */
+    export function validatePostcode(config: PostcodeConfig): any;
   }
 
   /** 是否布尔值 */
@@ -167,6 +188,8 @@ declare module validing {
   function isEndStr(value: any, str: string): boolean
   /** 是否邮箱 */
   function isEmail(value: any): boolean
+  /** 是否邮编 */
+  function isPostcode(value: any): boolean
 }
 
 export default validing
@@ -191,3 +214,5 @@ export declare function isStartStr(value: any, str: string): boolean
 export declare function isEndStr(value: any, str: string): boolean
 /** 是否邮箱 */
 export declare function isEmail(value: any): boolean
+/** 是否邮编 */
+export declare function isPostcode(value: any): boolean

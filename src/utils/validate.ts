@@ -40,7 +40,7 @@ export function isPhoneNumber(value: any): boolean {
  * 验证固定电话
  */
 export function isFixedNumber(value: any): boolean {
-  return /0\d{2,3}-\d{7,8}/.test(value)
+  return /^0\d{2,3}-\d{7,8$}/.test(value)
 }
 
 /**
@@ -88,7 +88,14 @@ export function isEndStr(value: any, str: string): boolean {
 /**
  * 验证邮箱
  */
-export function isEmail(email: string): boolean {
+export function isEmail(value: string): boolean {
   const re = /^(([^<>()\\[\]\\.,;:\s@"]+(\.[^<>()\\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-  return re.test(email)
+  return re.test(value)
+}
+
+/**
+ * 验证邮编
+ */
+export function isPostcode(value: string): boolean {
+  return /^\d{6}$/.test(value)
 }

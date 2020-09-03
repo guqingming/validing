@@ -43,6 +43,7 @@ validing.isNumber('2.')
 | isStartStr | 是否某个字符串开头 | value 验证值<br>str 字符串 | Boolean  |
 | isEndStr | 是否某个字符串结尾 | value 验证值<br>str 字符串 | Boolean  |
 | isEmail | 是否邮箱 | value 验证值 | Boolean  |
+| isPostcode | 是否邮编 | value 验证值 | Boolean  |
 
 ## el-form中rules使用方法，遵循element-ui中使用规格
 
@@ -106,4 +107,6 @@ rules = {
 | | | name | 字段名称 | String | 此项 |
 | validateMail | 验证邮箱 | required | 是否必填 | Boolean | false |
 | | | maxLength | 字符的最大长度 | Number | 60 |
+| | | name | 字段名称 | String | 此项 |
+| validatePostcode | 验证邮编 | required | 是否必填 | Boolean | false |
 | | | name | 字段名称 | String | 此项 |
