@@ -18,6 +18,31 @@
 $ npm install validing
 ```
 
+## 如果不在element-ui中使用，可在js中直接使用函数验证
+
+```js
+import validing, { isPhoneNumber, isNumber } from 'validing'
+
+isPhoneNumber('18113727957')
+// true
+validing.isNumber('2.')
+// false
+```
+
+## 方法校验
+
+| 事件名     | 说明       | 参数列表 | 回调数据 |
+| ---------- | ---------- | -------- | -------- |
+| isBooblean | 是否布尔值 | value 验证值 | Boolean |
+| isString | 是否字符串 | value 验证值 | Boolean  |
+| isNumber | 是否数字 | value 验证值 | Boolean  |
+| isDecimal | 验证小数位数 | value 验证值<br>length 数量 默认值2 | Boolean  |
+| isHaveValue | 是否含有有效值 | value 验证值 | Boolean  |
+| isPhoneNumber | 是否手机号码 | value 验证值 | Boolean  |
+| isRangeNumber | 是否有效的数字区间 | value 验证值 | Boolean  |
+| isStartStr | 是否某个字符串开头 | value 验证值<br>str 字符串 | Boolean  |
+| isEndStr | 是否某个字符串结尾 | value 验证值<br>str 字符串 | Boolean  |
+
 ## el-form中rules使用方法，遵循element-ui中使用规格
 
 ```js
@@ -61,17 +86,6 @@ rules = {
 }
 ```
 
-## 如果不在element-ui中使用，可在js中直接使用函数验证
-
-```js
-import validing, { isPhoneNumber, isNumber } from 'validing'
-
-isPhoneNumber('18113727957')
-// true
-validing.isNumber('2.')
-// false
-```
-
 ## Rules参数说明
 
 | 方法 | 方法释义 | 配置参数 | 参数释义 | 可选值 | 默认值 |
@@ -89,20 +103,3 @@ validing.isNumber('2.')
 | validateWebsite | 验证是否有效网址 | required | 是否必填 | Boolean | false |
 | | | protocols | 允许的网站协议 | Array | ['http', 'https', 'ftp', 'sftp', 'mailto', 'tel'] |
 | | | name | 字段名称 | String | 此项 |
-
-
-## 方法校验
-
-| 事件名     | 说明       | 参数列表 | 回调数据 |
-| ---------- | ---------- | -------- | -------- |
-| isBooblean | 是否布尔值 | value 验证值 | Boolean |
-| isString | 是否字符串 | value 验证值 | Boolean  |
-| isNumber | 是否数字 | value 验证值 | Boolean  |
-| isDecimal | 验证小数位数 | value 验证值<br>length 数量 默认值2 | Boolean  |
-| isHaveValue | 是否含有有效值 | value 验证值 | Boolean  |
-| isPhoneNumber | 是否手机号码 | value 验证值 | Boolean  |
-| isRangeNumber | 是否有效的数字区间 | value 验证值 | Boolean  |
-| isStartStr | 是否某个字符串开头 | value 验证值<br>str 字符串 | Boolean  |
-| isEndStr | 是否某个字符串结尾 | value 验证值<br>str 字符串 | Boolean  |
-
-
