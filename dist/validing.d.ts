@@ -410,6 +410,34 @@ declare module validing {
      * 验证IP地址
      */
     export function validateIP(config: IpConfig): any;
+
+    /**
+     * 验证长度
+     */
+    export interface LengthConfig {
+      /**
+       * 是否必填：
+       * true 是；
+       * false 否(默认)
+       **/
+      required ? : boolean;
+      /**
+       * 长度区间：
+       * [0,-](默认值)
+       * []代表包含此数字，()代表不包含此数字，-代表不限制
+       * 小数在前，大数在后
+       */
+      range ? : string;
+      /**
+       * 错误提示：
+       * 默认按情况提示相应错误
+       **/
+      tip ? : string;
+    }
+    /**
+     * 验证长度
+     */
+    export function validateLength(config: LengthConfig): any;
   }
 
   /** 是否布尔值 */

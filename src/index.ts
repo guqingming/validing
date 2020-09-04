@@ -15,6 +15,7 @@ import validateNo from './utils/validateNo'
 import validateDate from './utils/validateDate'
 import validateNoSpecialChart from './utils/validateNoSpecialChart'
 import validateIP from './utils/validateIP'
+import validateLength from './utils/validateLength'
 import {
   isBooblean,
   isString,
@@ -59,7 +60,8 @@ const Validing = {
     validateNo,
     validateDate,
     validateNoSpecialChart,
-    validateIP
+    validateIP,
+    validateLength
   },
   isBooblean,
   isString,

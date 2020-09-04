@@ -114,6 +114,9 @@ rules = {
 | | | tip | 错误提示 | String | 按情景提示具体错误 |
 | validateSpace | 验证首尾是否含有空格 | required | 是否必填 | Boolean | false |
 | | | tip | 错误提示 | String | 按情景提示具体错误 |
+| validateLength | 验证字符串长度 | required | 是否必填 | Boolean | false |
+| | | range | 长度区间 | String<br>    格式如[0,-]<br>    []代表包含此数字，()代表不包含此数字，-代表不限制<br>    小数在前，大数在后 | [0,-] |
+| | | tip | 错误提示 | String | 按情景提示具体错误 |
 | validateWebsite | 验证是否有效网址 | required | 是否必填 | Boolean | false |
 | | | protocols | 允许的网站协议 | Array | ['http', 'https', 'ftp', 'sftp', 'mailto', 'tel'] |
 | | | tip | 错误提示 | String | 按情景提示具体错误 |
