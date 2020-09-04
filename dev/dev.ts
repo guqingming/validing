@@ -1,6 +1,6 @@
-import Vue from "vue"
+import Vue from 'vue'
 import ElementUI from 'element-ui'
-import Dev from "@dev/Dev.vue"
+import Dev from '@dev/Dev.vue'
 
 import 'normalize.css'
 
@@ -10,4 +10,4 @@ Vue.use(ElementUI)
 
 new Vue({
   render: h => h(Dev)
-}).$mount("#app")
+}).$mount('#app')

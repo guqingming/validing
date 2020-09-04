@@ -31,8 +31,8 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator'
-import validing, { isPhoneNumber, isNumber } from '../src/index'
+import { Component, Vue } from 'vue-property-decorator'
+import validing, { isPhoneNumber } from '../src/index'
 import { ElForm } from 'element-ui/types/form'
 
 // import validing, { isPhoneNumber } from 'validing'
@@ -56,7 +56,8 @@ export default class extends Vue {
         {
           required: true
         }
-      ), trigger: 'blur' }
+      ),
+      trigger: 'blur' }
     ],
     number: [
       { validator: validing.rules.validateNumber(
@@ -67,14 +68,16 @@ export default class extends Vue {
           strict: false,
           name: '金额'
         }
-      ), trigger: 'blur' }
+      ),
+      trigger: 'blur' }
     ],
     space: [
       { validator: validing.rules.validateSpace(
         {
           required: false
         }
-      ), trigger: 'blur' }
+      ),
+      trigger: 'blur' }
     ],
     website: [
       { validator: validing.rules.validateWebsite(
@@ -82,7 +85,8 @@ export default class extends Vue {
           required: false,
           protocols: ['http', 'https']
         }
-      ), trigger: 'blur' }
+      ),
+      trigger: 'blur' }
     ]
   }
   isPhoneNumber = isPhoneNumber
