@@ -36,6 +36,7 @@ validing.isNumber('2.')
 | isBooblean | 是否布尔值 | value 验证值 | Boolean |
 | isString | 是否字符串 | value 验证值 | Boolean  |
 | isNumber | 是否数字 | value 验证值 | Boolean  |
+| isArray | 是否数组 | value 验证值 | Boolean  |
 | isDecimal | 验证小数位数 | value 验证值<br>length 数量 默认值2 | Boolean  |
 | isHaveValue | 是否含有有效值 | value 验证值 | Boolean  |
 | isPhoneNumber | 是否手机号码 | value 验证值 | Boolean  |
@@ -54,6 +55,7 @@ validing.isNumber('2.')
 | isNo | 是否编码<br>数字英文的组合 | value 验证值 | Boolean  |
 | isDate | 是否日期格式<br>2020-09-04 12:00:00 或 2020-09-04 | value 验证值 | Boolean  |
 | isNoSpecialChart | 是否无特殊字符 | value 验证值 | Boolean  |
+| isIP | 是否IP地址 | value 验证值 | Boolean  |
 
 ## el-form中rules使用方法，遵循element-ui中使用规格
 
@@ -141,5 +143,7 @@ rules = {
 | validateDate | 验证日期<br>2020-09-04 12:00:00 或 2020-09-04 | required | 是否必填 | Boolean | false |
 | | | tip | 错误提示 | String | 按情景提示具体错误 |
 | validateNoSpecialChart | 验证无特殊字符 | required | 是否必填 | Boolean | false |
+| | | tip | 错误提示 | String | 按情景提示具体错误 |
+| validateIP | 验证IP地址 | required | 是否必填 | Boolean | false |
 | | | tip | 错误提示 | String | 按情景提示具体错误 |
 

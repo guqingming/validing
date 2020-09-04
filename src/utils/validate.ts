@@ -182,3 +182,10 @@ export function isDate(value: string): boolean {
 export function isNoSpecialChart(str: string): boolean {
   return /^[a-zA-Z0-9\u4e00-\u9fa5]+$/.test(str)
 }
+
+/**
+ * 验证无特殊字符
+ */
+export function isIP(str: string): boolean {
+  return /^((2[0-4]\d|25[0-5]|[01]?\d\d?)\.){3}(2[0-4]\d|25[0-5]|[01]?\d\d?)$/.test(str)
+}

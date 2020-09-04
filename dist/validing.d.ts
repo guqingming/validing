@@ -389,6 +389,27 @@ declare module validing {
      * 验证无特殊字符
      */
     export function validateNoSpecialChart(config: NoSpecialChartConfig): any;
+
+    /**
+     * 验证IP地址
+     */
+    export interface IpConfig {
+      /**
+       * 是否必填：
+       * true 是；
+       * false 否(默认)
+       **/
+      required ? : boolean;
+      /**
+       * 错误提示：
+       * 默认按情况提示相应错误
+       **/
+      tip ? : string;
+    }
+    /**
+     * 验证IP地址
+     */
+    export function validateIP(config: IpConfig): any;
   }
 
   /** 是否布尔值 */
@@ -397,6 +418,8 @@ declare module validing {
   function isString(value: any): boolean
   /** 是否数字 */
   function isNumber(value: any): boolean
+  /** 是否数组 */
+  function isArray(value: any): boolean
   /** 是否含有有效值 */
   function isHaveValue(value: any): boolean
   /** 是否手机号码 */
@@ -433,6 +456,8 @@ declare module validing {
   function isDate(value: any): boolean
   /** 是否无特殊字符 */
   function isNoSpecialChart(value: any): boolean
+  /** 是否IP地址 */
+  function isIP(value: any): boolean
 }
 
 export default validing
@@ -443,6 +468,8 @@ export declare function isBooblean(value: any): boolean
 export declare function isString(value: any): boolean
 /** 是否数字 */
 export declare function isNumber(value: any): boolean
+/** 是否数组 */
+export declare function isArray(value: any): boolean
 /** 是否含有有效值 */
 export declare function isHaveValue(value: any): boolean
 /** 是否手机号码 */
@@ -479,3 +506,5 @@ export declare function isNo(value: any): boolean
 export declare function isDate(value: any): boolean
 /** 是否无特殊字符 */
 export declare function isNoSpecialChart(value: any): boolean
+/** 是否IP地址 */
+export declare function isIP(value: any): boolean

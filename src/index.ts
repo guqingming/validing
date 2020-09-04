@@ -14,6 +14,7 @@ import validatePassword from './utils/validatePassword'
 import validateNo from './utils/validateNo'
 import validateDate from './utils/validateDate'
 import validateNoSpecialChart from './utils/validateNoSpecialChart'
+import validateIP from './utils/validateIP'
 import {
   isBooblean,
   isString,
@@ -36,7 +37,8 @@ import {
   isPassword,
   isNo,
   isDate,
-  isNoSpecialChart
+  isNoSpecialChart,
+  isIP
 } from './utils/validate'
 
 const Validing = {
@@ -56,7 +58,8 @@ const Validing = {
     validatePassword,
     validateNo,
     validateDate,
-    validateNoSpecialChart
+    validateNoSpecialChart,
+    validateIP
   },
   isBooblean,
   isString,
@@ -79,7 +82,8 @@ const Validing = {
   isPassword,
   isNo,
   isDate,
-  isNoSpecialChart
+  isNoSpecialChart,
+  isIP
 }
 
 export default Validing
@@ -106,5 +110,6 @@ export {
   isPassword,
   isNo,
   isDate,
-  isNoSpecialChart
+  isNoSpecialChart,
+  isIP
 }
