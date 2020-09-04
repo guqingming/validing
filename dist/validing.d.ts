@@ -488,6 +488,8 @@ declare module validing {
   function isIP(value: any): boolean
   /** 是否网址 */
   function isWebSite(value: any): boolean
+  /** 首尾是否有空格 */
+  function isHaveSpace(value: any): boolean
 }
 
 export default validing
@@ -540,3 +542,5 @@ export declare function isNoSpecialChart(value: any): boolean
 export declare function isIP(value: any): boolean
 /** 是否网址 */
 export declare function isWebSite(value: any): boolean
+/** 首尾是否有空格 */
+export declare function isHaveSpace(value: any): boolean

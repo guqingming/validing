@@ -57,6 +57,7 @@ validing.isNumber('2.')
 | isNoSpecialChart | 是否无特殊字符 | value 验证值 | Boolean  |
 | isIP | 是否IP地址 | value 验证值 | Boolean  |
 | isWebSite | 是否网址 | value 验证值 | Boolean  |
+| isHaveSpace | 是否首尾含有空格 | value 验证值 | Boolean  |
 
 ## el-form中rules使用方法，遵循element-ui中使用规格
 

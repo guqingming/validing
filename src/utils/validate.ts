@@ -61,7 +61,7 @@ export function isNumber(value: any): boolean {
  * 验证首尾是否有空格
  */
 export function isHaveSpace(value: any): boolean {
-  return /(^ | $)/.test(value)
+  return /(^[\u00A0\u0020\u3000]|[\u00A0\u0020\u3000]$)/.test(value)
 }
 
 /**
