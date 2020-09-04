@@ -168,3 +168,10 @@ export function isPassword(value: string, type = 1): boolean {
 export function isNo(value: string): boolean {
   return /^[A-Za-z0-9]+$/.test(value)
 }
+
+/**
+ * 验证日期
+ */
+export function isDate(value: string): boolean {
+  return /^\d{4}(-\d{1,2}){2}( \d{1,2}(:\d{1,2}){2})?$/.test(value)
+}

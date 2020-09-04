@@ -347,6 +347,27 @@ declare module validing {
      * 验证编码
      */
     export function validateNo(config: NoConfig): any;
+
+    /**
+     * 验证日期
+     */
+    export interface DateConfig {
+      /**
+       * 是否必填：
+       * true 是；
+       * false 否(默认)
+       **/
+      required ? : boolean;
+      /**
+       * 错误提示：
+       * 默认按情况提示相应错误
+       **/
+      tip ? : string;
+    }
+    /**
+     * 验证日期
+     */
+    export function validateDate(config: DateConfig): any;
   }
 
   /** 是否布尔值 */
@@ -387,6 +408,8 @@ declare module validing {
   function isPassword(value: any, type: 1 | 2): boolean
   /** 是否编码 */
   function isNo(value: any): boolean
+  /** 是否日期 */
+  function isDate(value: any): boolean
 }
 
 export default validing
@@ -429,3 +452,5 @@ export declare function isUserName(value: any): boolean
 export declare function isPassword(value: any, type: 1 | 2): boolean
 /** 是否编码 */
 export declare function isNo(value: any): boolean
+/** 是否日期 */
+export declare function isDate(value: any): boolean
