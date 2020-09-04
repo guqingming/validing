@@ -8,6 +8,7 @@ import validateIDCardNo from './utils/validateIDCardNo'
 import validateQQ from './utils/validateQQ'
 import validateWinxin from './utils/validateWinxin'
 import validateCarNo from './utils/validateCarNo'
+import validateChineseName from './utils/validateChineseName'
 import {
   isBooblean,
   isString,
@@ -24,7 +25,8 @@ import {
   isIDCardNo,
   isQQ,
   isWeixin,
-  isCarNo
+  isCarNo,
+  isChineseName
 } from './utils/validate'
 
 const Validing = {
@@ -38,7 +40,8 @@ const Validing = {
     validateIDCardNo,
     validateQQ,
     validateWinxin,
-    validateCarNo
+    validateCarNo,
+    validateChineseName
   },
   isBooblean,
   isString,
@@ -55,7 +58,8 @@ const Validing = {
   isIDCardNo,
   isQQ,
   isWeixin,
-  isCarNo
+  isCarNo,
+  isChineseName
 }
 
 export default Validing
@@ -76,5 +80,6 @@ export {
   isIDCardNo,
   isQQ,
   isWeixin,
-  isCarNo
+  isCarNo,
+  isChineseName
 }

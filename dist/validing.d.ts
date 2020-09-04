@@ -212,7 +212,7 @@ declare module validing {
       name ? : string;
     }
     /**
-     * 验证身份证号码
+     * 验证QQ号
      */
     export function validateQQ(config: QQConfig): any;
 
@@ -233,7 +233,7 @@ declare module validing {
       name ? : string;
     }
     /**
-     * 验证身份证号码
+     * 验证微信号
      */
     export function validateWeixin(config: WeixinConfig): any;
 
@@ -254,9 +254,30 @@ declare module validing {
       name ? : string;
     }
     /**
-     * 验证身份证号码
+     * 验证车牌号码
      */
     export function validateCarNo(config: CarNoConfig): any;
+
+    /**
+     * 验证中文姓名
+     */
+    export interface ChineseNameConfig {
+      /**
+       * 是否必填：
+       * true 是；
+       * false 否(默认)
+       **/
+      required ? : boolean;
+      /**
+       * 字段名称：
+       * 此项(默认)
+       **/
+      name ? : string;
+    }
+    /**
+     * 验证中文姓名
+     */
+    export function validateChineseName(config: ChineseNameConfig): any;
   }
 
   /** 是否布尔值 */
@@ -287,6 +308,10 @@ declare module validing {
   function isQQ(value: any): boolean
   /** 是否微信号 */
   function isWeixin(value: any): boolean
+  /** 是否车牌号码 */
+  function isCarNo(value: any): boolean
+  /** 是否中文姓名 */
+  function isChineseName(value: any): boolean
 }
 
 export default validing
@@ -319,3 +344,7 @@ export declare function isIDCardNo(value: any): boolean
 export declare function isQQ(value: any): boolean
 /** 是否微信号 */
 export declare function isWeixin(value: any): boolean
+/** 是否车牌号码 */
+export declare function isCarNo(value: any): boolean
+/** 是否中文姓名 */
+export declare function isChineseName(value: any): boolean

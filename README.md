@@ -48,6 +48,7 @@ validing.isNumber('2.')
 | isQQ | 是否QQ号 | value 验证值 | Boolean  |
 | isWeixin | 是否微信号 | value 验证值 | Boolean  |
 | isCarNo | 是否车牌号码 | value 验证值 | Boolean  |
+| isChineseName | 是否中文姓名 | value 验证值 | Boolean  |
 
 ## el-form中rules使用方法，遵循element-ui中使用规格
 
@@ -122,5 +123,7 @@ rules = {
 | validateWeixin | 验证微信号 | required | 是否必填 | Boolean | false |
 | | | name | 字段名称 | String | 此项 |
 | validateCarNo | 验证车牌号码 | required | 是否必填 | Boolean | false |
+| | | name | 字段名称 | String | 此项 |
+| validateChineseName | 验证中文姓名 | required | 是否必填 | Boolean | false |
 | | | name | 字段名称 | String | 此项 |
 
