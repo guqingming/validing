@@ -148,3 +148,16 @@ export function isChineseName(value: string): boolean {
 export function isUserName(value: string): boolean {
   return /^[a-zA-Z][a-zA-Z0-9_]{2,15}$/.test(value)
 }
+
+/**
+ * 验证密码
+ */
+export function isPassword(value: string, type = 1): boolean {
+  switch (type) {
+    case 1:
+    default:
+      return /^[a-zA-Z]\w{5,17}$/.test(value)
+    case 2:
+      return /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,18}$/.test(value)
+  }
+}

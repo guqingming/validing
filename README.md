@@ -50,6 +50,7 @@ validing.isNumber('2.')
 | isCarNo | 是否车牌号码 | value 验证值 | Boolean  |
 | isChineseName | 是否中文姓名<br>2-4个中文汉字 | value 验证值 | Boolean  |
 | isUserName | 是否用户名<br>字母开头，允许3-16个字符，字母数字下划线 | value 验证值 | Boolean  |
+| isPassword | 是否密码 | value 验证值<br>type 类型<br>    1 弱(以字母开头，长度在6~18之间，只能包含字母、数字和下划线)<br>    2 强(必须包含大小写字母和数字的组合，不能使用特殊字符，长度在6-18之间) | Boolean  |
 
 ## el-form中rules使用方法，遵循element-ui中使用规格
 
@@ -128,5 +129,8 @@ rules = {
 | validateChineseName | 验证中文姓名<br>2-4个中文汉字 | required | 是否必填 | Boolean | false |
 | | | name | 字段名称 | String | 此项 |
 | validateUserName | 验证用户名<br>字母开头，允许3-16个字符，字母数字下划线 | required | 是否必填 | Boolean | false |
+| | | name | 字段名称 | String | 此项 |
+| validatePassword | 验证密码 | required | 是否必填 | Boolean | false |
+| | | type | 密码强度 | Number<br>    1 弱(以字母开头，长度在6~18之间，只能包含字母、数字和下划线)<br>    2 强(必须包含大小写字母和数字的组合，不能使用特殊字符，长度在6-18之间) | 1 |
 | | | name | 字段名称 | String | 此项 |
 

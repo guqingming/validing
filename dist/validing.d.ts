@@ -299,6 +299,33 @@ declare module validing {
      * 验证用户名
      */
     export function validateUserName(config: UserNameConfig): any;
+
+    /**
+     * 验证密码
+     */
+    export interface PasswordConfig {
+      /**
+       * 是否必填：
+       * true 是；
+       * false 否(默认)
+       **/
+      required ? : boolean;
+      /**
+       * 密码强度：
+       * 1 弱；
+       * 2 强；
+       **/
+      type ? : 1 | 2;
+      /**
+       * 字段名称：
+       * 此项(默认)
+       **/
+      name ? : string;
+    }
+    /**
+     * 验证密码
+     */
+    export function validatePassword(config: PasswordConfig): any;
   }
 
   /** 是否布尔值 */
@@ -324,7 +351,7 @@ declare module validing {
   /** 是否邮编 */
   function isPostcode(value: any): boolean
   /** 是否身份证号码 */
-  function isIDCardNo(value: any): boolean
+  function isIDCardNo(value: any, type: 0 | 1 | 2): boolean
   /** 是否QQ号 */
   function isQQ(value: any): boolean
   /** 是否微信号 */
@@ -335,6 +362,8 @@ declare module validing {
   function isChineseName(value: any): boolean
   /** 是否用户名 */
   function isUserName(value: any): boolean
+  /** 是否密码 */
+  function isPassword(value: any, type: 1 | 2): boolean
 }
 
 export default validing
@@ -362,7 +391,7 @@ export declare function isEmail(value: any): boolean
 /** 是否邮编 */
 export declare function isPostcode(value: any): boolean
 /** 是否身份证号码 */
-export declare function isIDCardNo(value: any): boolean
+export declare function isIDCardNo(value: any, type: 0 | 1 | 2): boolean
 /** 是否QQ号 */
 export declare function isQQ(value: any): boolean
 /** 是否微信号 */
@@ -373,3 +402,5 @@ export declare function isCarNo(value: any): boolean
 export declare function isChineseName(value: any): boolean
 /** 是否用户名 */
 export declare function isUserName(value: any): boolean
+/** 是否密码 */
+export declare function isPassword(value: any, type: 1 | 2): boolean
