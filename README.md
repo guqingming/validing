@@ -51,7 +51,7 @@ validing.isNumber('2.')
 | isCarNo | 是否车牌号码 | value 验证值 | Boolean  |
 | isChineseName | 是否中文姓名<br>2-4个中文汉字 | value 验证值 | Boolean  |
 | isUserName | 是否用户名<br>字母开头，允许3-16个字符，字母数字下划线 | value 验证值 | Boolean  |
-| isPassword | 是否密码 | value 验证值<br>type 类型<br>    1 弱(以字母开头，长度在6~18之间，只能包含字母、数字和下划线)<br>    2 强(必须包含大小写字母和数字的组合，不能使用特殊字符，长度在6-18之间) | Boolean  |
+| isPassword | 是否密码 | value 验证值<br>type 类型<br>    1 弱(任意数字字母或符号的组合，不能使用特殊字符)<br>    2 强(必须包含大小写字母和数字的组合，不能使用特殊字符，长度在6-18之间) | Boolean  |
 | isNo | 是否编码<br>数字英文的组合 | value 验证值 | Boolean  |
 | isDate | 是否日期格式<br>2020-09-04 12:00:00 或 2020-09-04 | value 验证值 | Boolean  |
 | isNoSpecialChart | 是否无特殊字符 | value 验证值 | Boolean  |
@@ -139,7 +139,7 @@ rules = {
 | validateUserName | 验证用户名<br>字母开头，允许3-16个字符，字母数字下划线 | required | 是否必填 | Boolean | false |
 | | | tip | 错误提示 | String | 按情景提示具体错误 |
 | validatePassword | 验证密码 | required | 是否必填 | Boolean | false |
-| | | type | 密码强度 | Number<br>    1 弱(以字母开头，长度在6~18之间，只能包含字母、数字和下划线)<br>    2 强(必须包含大小写字母和数字的组合，不能使用特殊字符，长度在6-18之间) | 1 |
+| | | type | 密码强度 | Number<br>    1 弱(任意数字字母或符号的组合，不能使用特殊字符)<br>    2 强(必须包含大小写字母和数字的组合，不能使用特殊字符，长度在6-18之间) | 1 |
 | | | tip | 错误提示 | String | 按情景提示具体错误 |
 | validateNo | 验证编码<br>数字和英文的组合 | required | 是否必填 | Boolean | false |
 | | | tip | 错误提示 | String | 按情景提示具体错误 |

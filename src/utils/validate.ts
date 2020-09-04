@@ -156,7 +156,7 @@ export function isPassword(value: string, type = 1): boolean {
   switch (type) {
     case 1:
     default:
-      return /^[a-zA-Z]\w{5,17}$/.test(value)
+      return /^[\~\!\@\#\$\%\^\&\*\(\)\[\]\{\}\?\,\.\w\\\|\:\"\<\>\;\'\,\.\/\-\=]{6,18}$/.test(value)
     case 2:
       return /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,18}$/.test(value)
   }
