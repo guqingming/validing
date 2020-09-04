@@ -1,6 +1,6 @@
 {
   "name": "validing",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "验证规则集合，可直接用于vue-element-ui中的rules",
   "author": "Gu Qingming <15524261@qq.com>",
   "homepage": "https://github.com/guqingming/validing",
