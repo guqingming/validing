@@ -47,7 +47,7 @@ export function isFixedNumber(value: any): boolean {
  * 验证数字区间的格式
  */
 export function isRangeNumber(value: any): boolean {
-  return /^[\(\[]-?\d+,-?\d+[\]\)]$/.test(value)
+  return /^[\(\[]-?\d*,-?\d*[\]\)]$/.test(value)
 }
 
 /**
