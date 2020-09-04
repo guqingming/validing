@@ -5,7 +5,7 @@ import validing from 'dist/validing'
 const defaultConfig: validing.rules.PhoneConfig = {
   required: false,
   type: 0,
-  name: '此项'
+  tip: ''
 }
 
 const validatePhone = (config: validing.rules.PhoneConfig) => {
@@ -16,8 +16,8 @@ const validatePhone = (config: validing.rules.PhoneConfig) => {
     if (config.type !== undefined && config.type !== 0 && config.type !== 1 && config.type !== 2) {
       throw Error('validatePhone函数type参数只能是1|2|3')
     }
-    if (config.name !== undefined && !isString(config.name)) {
-      throw Error('validatePhone函数name参数只能是字符串')
+    if (config.tip !== undefined && !isString(config.tip)) {
+      throw Error('validatePhone函数tip参数只能是字符串')
     }
   } catch (error) {
     console.error(error.message)
@@ -26,18 +26,18 @@ const validatePhone = (config: validing.rules.PhoneConfig) => {
     const theConfig: {
       required: boolean;
       type: number;
-      name: string;
+      tip: string;
     } = Object.assign(defaultConfig, getValueObject(config))
     if (!config.required && !isHaveValue(value)) {
       callback()
     } else if (!isHaveValue(value)) {
-      callback(new Error(`${ theConfig.name }必填`))
+      callback(new Error(theConfig.tip || `必填`))
     } else if (!isPhoneNumber(value) && theConfig.type === 1) {
-      callback(new Error(`${ theConfig.name }格式错误`))
+      callback(new Error(theConfig.tip || `格式错误`))
     } else if (!isFixedNumber(value) && theConfig.type === 2) {
-      callback(new Error(`${ theConfig.name }格式错误`))
+      callback(new Error(theConfig.tip || `格式错误`))
     } else if (!isPhoneNumber(value) && !isFixedNumber(value) && theConfig.type === 0) {
-      callback(new Error(`${ theConfig.name }格式错误`))
+      callback(new Error(theConfig.tip || `格式错误`))
     } else {
       callback()
     }

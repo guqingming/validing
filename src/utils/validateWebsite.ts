@@ -5,7 +5,7 @@ import validing from 'dist/validing'
 const defaultConfig: validing.rules.WebsiteConfig = {
   required: false,
   protocols: ['http', 'https', 'ftp', 'sftp', 'mailto', 'tel'],
-  name: '此项'
+  tip: ''
 }
 
 const validateWebsite = (config: validing.rules.WebsiteConfig) => {
@@ -24,8 +24,8 @@ const validateWebsite = (config: validing.rules.WebsiteConfig) => {
         }
       }
     }
-    if (config.name !== undefined && !isString(config.name)) {
-      throw Error('validateWebsite函数name参数只能是字符串')
+    if (config.tip !== undefined && !isString(config.tip)) {
+      throw Error('validateWebsite函数tip参数只能是字符串')
     }
   } catch (error) {
     console.error(error.message)
@@ -34,14 +34,14 @@ const validateWebsite = (config: validing.rules.WebsiteConfig) => {
     const theConfig: {
       required: boolean;
       protocols: string[];
-      name: string;
+      tip: string;
     } = Object.assign(defaultConfig, getValueObject(config))
     if (!config.required && !isHaveValue(value)) {
       callback()
     } else if (!isHaveValue(value)) {
-      callback(new Error(`${ theConfig.name }必填`))
+      callback(new Error(theConfig.tip || `必填`))
     } else if (!theConfig.protocols.some(item => isStartStr(value, `${ item }:`))) {
-      callback(new Error(`${ theConfig.name }外部网址格式错误`))
+      callback(new Error(theConfig.tip || `格式错误`))
     } else {
       callback()
     }

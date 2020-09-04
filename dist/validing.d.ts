@@ -25,10 +25,10 @@ declare module validing {
        **/
       type ? : 0 | 1 | 2;
       /**
-       * 字段名称：
-       * 此项(默认)
+       * 错误提示：
+       * 默认按情况提示相应错误
        **/
-      name ? : string;
+      tip ? : string;
     }
     /**
      * 验证电话号码
@@ -65,10 +65,10 @@ declare module validing {
        */
       strict ? : boolean;
       /**
-       * 字段名称：
-       * 此项(默认)
+       * 错误提示：
+       * 默认按情况提示相应错误
        **/
-      name ? : string;
+      tip ? : string;
     }
     /**
      * 验证数字或金额
@@ -86,10 +86,10 @@ declare module validing {
        **/
       required ? : boolean;
       /**
-       * 字段名称：
-       * 此项(默认)
+       * 错误提示：
+       * 默认按情况提示相应错误
        **/
-      name ? : string;
+      tip ? : string;
     }
     /**
      * 验证首尾是否含有空格
@@ -111,10 +111,10 @@ declare module validing {
        */
       protocols ? : ('http' | 'https' | 'ftp' | 'sftp' | 'mailto' | 'tel')[];
       /**
-       * 字段名称：
-       * 此项(默认)
+       * 错误提示：
+       * 默认按情况提示相应错误
        **/
-      name ? : string;
+      tip ? : string;
     }
     /**
      * 验证是否有效网址
@@ -136,10 +136,10 @@ declare module validing {
        */
       maxLength ? : number;
       /**
-       * 字段名称：
-       * 此项(默认)
+       * 错误提示：
+       * 默认按情况提示相应错误
        **/
-      name ? : string;
+      tip ? : string;
     }
     /**
      * 验证邮箱地址
@@ -157,10 +157,10 @@ declare module validing {
        **/
       required ? : boolean;
       /**
-       * 字段名称：
-       * 此项(默认)
+       * 错误提示：
+       * 默认按情况提示相应错误
        **/
-      name ? : string;
+      tip ? : string;
     }
     /**
      * 验证邮政编码
@@ -185,10 +185,10 @@ declare module validing {
        **/
       type ? : 0 | 1 | 2;
       /**
-       * 字段名称：
-       * 此项(默认)
+       * 错误提示：
+       * 默认按情况提示相应错误
        **/
-      name ? : string;
+      tip ? : string;
     }
     /**
      * 验证身份证号码
@@ -206,10 +206,10 @@ declare module validing {
        **/
       required ? : boolean;
       /**
-       * 字段名称：
-       * 此项(默认)
+       * 错误提示：
+       * 默认按情况提示相应错误
        **/
-      name ? : string;
+      tip ? : string;
     }
     /**
      * 验证QQ号
@@ -227,10 +227,10 @@ declare module validing {
        **/
       required ? : boolean;
       /**
-       * 字段名称：
-       * 此项(默认)
+       * 错误提示：
+       * 默认按情况提示相应错误
        **/
-      name ? : string;
+      tip ? : string;
     }
     /**
      * 验证微信号
@@ -248,10 +248,10 @@ declare module validing {
        **/
       required ? : boolean;
       /**
-       * 字段名称：
-       * 此项(默认)
+       * 错误提示：
+       * 默认按情况提示相应错误
        **/
-      name ? : string;
+      tip ? : string;
     }
     /**
      * 验证车牌号码
@@ -269,10 +269,10 @@ declare module validing {
        **/
       required ? : boolean;
       /**
-       * 字段名称：
-       * 此项(默认)
+       * 错误提示：
+       * 默认按情况提示相应错误
        **/
-      name ? : string;
+      tip ? : string;
     }
     /**
      * 验证中文姓名
@@ -290,10 +290,10 @@ declare module validing {
        **/
       required ? : boolean;
       /**
-       * 字段名称：
-       * 此项(默认)
+       * 错误提示：
+       * 默认按情况提示相应错误
        **/
-      name ? : string;
+      tip ? : string;
     }
     /**
      * 验证用户名
@@ -317,10 +317,10 @@ declare module validing {
        **/
       type ? : 1 | 2;
       /**
-       * 字段名称：
-       * 此项(默认)
+       * 错误提示：
+       * 默认按情况提示相应错误
        **/
-      name ? : string;
+      tip ? : string;
     }
     /**
      * 验证密码

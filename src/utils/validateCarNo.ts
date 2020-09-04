@@ -4,7 +4,7 @@ import validing from 'dist/validing'
 
 const defaultConfig: validing.rules.CarNoConfig = {
   required: false,
-  name: '此项'
+  tip: ''
 }
 
 const validateCarNo = (config: validing.rules.CarNoConfig) => {
@@ -12,8 +12,8 @@ const validateCarNo = (config: validing.rules.CarNoConfig) => {
     if (config.required !== undefined && !isBooblean(config.required)) {
       throw Error('validateCarNo函数required参数必须为布尔值')
     }
-    if (config.name !== undefined && !isString(config.name)) {
-      throw Error('validateCarNo函数name参数只能是字符串')
+    if (config.tip !== undefined && !isString(config.tip)) {
+      throw Error('validateCarNo函数tip参数只能是字符串')
     }
   } catch (error) {
     console.error(error.message)
@@ -21,14 +21,14 @@ const validateCarNo = (config: validing.rules.CarNoConfig) => {
   return (rule: any, value: any, callback: any) => {
     const theConfig: {
       required: boolean;
-      name: string;
+      tip: string;
     } = Object.assign(defaultConfig, getValueObject(config))
     if (!config.required && !isHaveValue(value)) {
       callback()
     } else if (!isHaveValue(value)) {
-      callback(new Error(`${ theConfig.name }必填`))
+      callback(new Error(theConfig.tip || `必填`))
     } else if (!(isCarNo(value))) {
-      callback(new Error(`${ theConfig.name }格式错误`))
+      callback(new Error(theConfig.tip || `格式错误`))
     } else {
       callback()
     }

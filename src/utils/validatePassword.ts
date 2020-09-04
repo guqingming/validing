@@ -5,7 +5,7 @@ import validing from 'dist/validing'
 const defaultConfig: validing.rules.PasswordConfig = {
   required: false,
   type: 1,
-  name: '此项'
+  tip: ''
 }
 
 const validatePassword = (config: validing.rules.PasswordConfig) => {
@@ -16,8 +16,8 @@ const validatePassword = (config: validing.rules.PasswordConfig) => {
     if (config.type !== undefined && config.type !== 1 && config.type !== 2) {
       throw Error('validatePassword函数type参数只能是1|2')
     }
-    if (config.name !== undefined && !isString(config.name)) {
-      throw Error('validatePassword函数name参数只能是字符串')
+    if (config.tip !== undefined && !isString(config.tip)) {
+      throw Error('validatePassword函数tip参数只能是字符串')
     }
   } catch (error) {
     console.error(error.message)
@@ -26,16 +26,16 @@ const validatePassword = (config: validing.rules.PasswordConfig) => {
     const theConfig: {
       required: boolean;
       type: number;
-      name: string;
+      tip: string;
     } = Object.assign(defaultConfig, getValueObject(config))
     if (!config.required && !isHaveValue(value)) {
       callback()
     } else if (!isHaveValue(value)) {
-      callback(new Error(`${ theConfig.name }必填`))
+      callback(new Error(theConfig.tip || `必填`))
     } else if (!isHaveValue(value)) {
-      callback(new Error(`${ theConfig.name }必填`))
+      callback(new Error(theConfig.tip || `必填`))
     } else if (!(isPassword(value, theConfig.type))) {
-      callback(new Error(`${ theConfig.name }格式错误`))
+      callback(new Error(theConfig.tip || `格式错误`))
     } else {
       callback()
     }

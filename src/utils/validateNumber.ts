@@ -7,7 +7,7 @@ const defaultConfig: validing.rules.NumberConfig = {
   range: '[0,-]',
   decimal: 0,
   strict: false,
-  name: '此项'
+  tip: ''
 }
 
 const validateNumber = (config: validing.rules.NumberConfig) => {
@@ -21,8 +21,8 @@ const validateNumber = (config: validing.rules.NumberConfig) => {
     if (config.strict !== undefined && !isBooblean(config.strict)) {
       throw Error('validateNumber函数strict参数必须为布尔值')
     }
-    if (config.name !== undefined && !isString(config.name)) {
-      throw Error('validateNumber函数name参数只能是字符串')
+    if (config.tip !== undefined && !isString(config.tip)) {
+      throw Error('validateNumber函数tip参数只能是字符串')
     }
   } catch (error) {
     console.error(error.message)
@@ -33,18 +33,18 @@ const validateNumber = (config: validing.rules.NumberConfig) => {
       range: string;
       decimal: number;
       strict: boolean;
-      name: string;
+      tip: string;
     } = Object.assign(defaultConfig, getValueObject(config))
     if (!config.required && !isHaveValue(value)) {
       callback()
     } else if (!isHaveValue(value)) {
-      callback(new Error(`${ theConfig.name }必填`))
+      callback(new Error(theConfig.tip || `必填`))
     } else if (!isNumber(value)) {
-      callback(new Error(`${ theConfig.name }不是有效的数字`))
+      callback(new Error(theConfig.tip || `不是有效的数字`))
     } else if (!isInRange(theConfig.range, value)) {
-      callback(new Error(`${ theConfig.name }超出了允许的数值范围`))
+      callback(new Error(theConfig.tip || `超出了允许的数值范围`))
     } else if (!isIndecimal(theConfig.decimal, value, theConfig.strict)) {
-      callback(new Error(`${ theConfig.name }小数位数错误`))
+      callback(new Error(theConfig.tip || `小数位数错误`))
     } else {
       callback()
     }

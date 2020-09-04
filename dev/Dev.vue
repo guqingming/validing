@@ -66,7 +66,7 @@ export default class extends Vue {
           range: '[-2,100)',
           decimal: 2,
           strict: false,
-          name: '金额'
+          tip: '自定义提示错误'
         }
       ),
       trigger: 'blur' }

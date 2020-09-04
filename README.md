@@ -101,36 +101,36 @@ rules = {
 | ------------- | ------------ | -------- | ------------ | ----------------------------------------- | ------ |
 | validatePhone | 验证电话号码 | required | 是否必填 | Boolean | false |
 | | | type | 电话号码类型 | Number<br>    0 手机号码or座机号码 <br>    1 手机号码<br>    2 座机号码 | 0 |
-| | | name | 字段名称 | String | 此项 |
+| | | tip | 错误提示 | String | 按情景提示具体错误 |
 | validateNumber | 验证数字 | required | 是否必填 | Boolean | false |
 | | | range | 数字区间 | String<br>    格式如[0,-]<br>    []代表包含此数字，()代表不包含此数字，-代表不限制<br>    小数在前，大数在后 | [0,-] |
 | | | decimal | 小数的位数 | Number | 0 |
 | | | strict | 小数是否严格模式 | Boolean<br>    非严格模式时整数不做小数位数校验 | false |
-| | | name | 字段名称 | String | 此项 |
+| | | tip | 错误提示 | String | 按情景提示具体错误 |
 | validateSpace | 验证首尾是否含有空格 | required | 是否必填 | Boolean | false |
-| | | name | 字段名称 | String | 此项 |
+| | | tip | 错误提示 | String | 按情景提示具体错误 |
 | validateWebsite | 验证是否有效网址 | required | 是否必填 | Boolean | false |
 | | | protocols | 允许的网站协议 | Array | ['http', 'https', 'ftp', 'sftp', 'mailto', 'tel'] |
-| | | name | 字段名称 | String | 此项 |
+| | | tip | 错误提示 | String | 按情景提示具体错误 |
 | validateMail | 验证邮箱 | required | 是否必填 | Boolean | false |
 | | | maxLength | 字符的最大长度 | Number | 60 |
-| | | name | 字段名称 | String | 此项 |
+| | | tip | 错误提示 | String | 按情景提示具体错误 |
 | validatePostcode | 验证邮编 | required | 是否必填 | Boolean | false |
-| | | name | 字段名称 | String | 此项 |
+| | | tip | 错误提示 | String | 按情景提示具体错误 |
 | validateIDCardNo | 验证身份证号码 | required | 是否必填 | Boolean | false |
 | | | type | 身份证号码类型 | Number<br>    0 一代或二代<br>    1 一代<br>    2 二代 | 0 |
-| | | name | 字段名称 | String | 此项 |
+| | | tip | 错误提示 | String | 按情景提示具体错误 |
 | validateQQ | 验证QQ号 | required | 是否必填 | Boolean | false |
-| | | name | 字段名称 | String | 此项 |
+| | | tip | 错误提示 | String | 按情景提示具体错误 |
 | validateWeixin | 验证微信号 | required | 是否必填 | Boolean | false |
-| | | name | 字段名称 | String | 此项 |
+| | | tip | 错误提示 | String | 按情景提示具体错误 |
 | validateCarNo | 验证车牌号码 | required | 是否必填 | Boolean | false |
-| | | name | 字段名称 | String | 此项 |
+| | | tip | 错误提示 | String | 按情景提示具体错误 |
 | validateChineseName | 验证中文姓名<br>2-4个中文汉字 | required | 是否必填 | Boolean | false |
-| | | name | 字段名称 | String | 此项 |
+| | | tip | 错误提示 | String | 按情景提示具体错误 |
 | validateUserName | 验证用户名<br>字母开头，允许3-16个字符，字母数字下划线 | required | 是否必填 | Boolean | false |
-| | | name | 字段名称 | String | 此项 |
+| | | tip | 错误提示 | String | 按情景提示具体错误 |
 | validatePassword | 验证密码 | required | 是否必填 | Boolean | false |
 | | | type | 密码强度 | Number<br>    1 弱(以字母开头，长度在6~18之间，只能包含字母、数字和下划线)<br>    2 强(必须包含大小写字母和数字的组合，不能使用特殊字符，长度在6-18之间) | 1 |
-| | | name | 字段名称 | String | 此项 |
+| | | tip | 错误提示 | String | 按情景提示具体错误 |
 

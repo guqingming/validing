@@ -5,7 +5,7 @@ import validing from 'dist/validing'
 const defaultConfig: validing.rules.MailConfig = {
   required: false,
   maxLength: 60,
-  name: '此项'
+  tip: ''
 }
 
 const validateMail = (config: validing.rules.MailConfig) => {
@@ -21,8 +21,8 @@ const validateMail = (config: validing.rules.MailConfig) => {
         throw Error('validateMail函数maxLength必须是大于10的数字')
       }
     }
-    if (config.name !== undefined && !isString(config.name)) {
-      throw Error('validateMail函数name参数只能是字符串')
+    if (config.tip !== undefined && !isString(config.tip)) {
+      throw Error('validateMail函数tip参数只能是字符串')
     }
   } catch (error) {
     console.error(error.message)
@@ -31,16 +31,16 @@ const validateMail = (config: validing.rules.MailConfig) => {
     const theConfig: {
       required: boolean;
       maxLength: number;
-      name: string;
+      tip: string;
     } = Object.assign(defaultConfig, getValueObject(config))
     if (!config.required && !isHaveValue(value)) {
       callback()
     } else if (!isHaveValue(value)) {
-      callback(new Error(`${ theConfig.name }必填`))
+      callback(new Error(theConfig.tip || `必填`))
     } else if (!(isEmail(value))) {
-      callback(new Error(`${ theConfig.name }格式错误`))
+      callback(new Error(theConfig.tip || `格式错误`))
     } else if (value.length > theConfig.maxLength) {
-      callback(new Error(`${ theConfig.name }长度不能大于${ theConfig.maxLength }`))
+      callback(new Error(theConfig.tip || `长度不能大于${ theConfig.maxLength }`))
     } else {
       callback()
     }
