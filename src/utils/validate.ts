@@ -141,3 +141,10 @@ export function isCarNo(value: string): boolean {
 export function isChineseName(value: string): boolean {
   return /^[\u4e00-\u9fa5]{2,4}$/.test(value)
 }
+
+/**
+ * 验证用户名
+ */
+export function isUserName(value: string): boolean {
+  return /^[a-zA-Z][a-zA-Z0-9_]{2,15}$/.test(value)
+}

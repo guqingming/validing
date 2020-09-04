@@ -278,6 +278,27 @@ declare module validing {
      * 验证中文姓名
      */
     export function validateChineseName(config: ChineseNameConfig): any;
+
+    /**
+     * 验证用户名
+     */
+    export interface UserNameConfig {
+      /**
+       * 是否必填：
+       * true 是；
+       * false 否(默认)
+       **/
+      required ? : boolean;
+      /**
+       * 字段名称：
+       * 此项(默认)
+       **/
+      name ? : string;
+    }
+    /**
+     * 验证用户名
+     */
+    export function validateUserName(config: UserNameConfig): any;
   }
 
   /** 是否布尔值 */
@@ -312,6 +333,8 @@ declare module validing {
   function isCarNo(value: any): boolean
   /** 是否中文姓名 */
   function isChineseName(value: any): boolean
+  /** 是否用户名 */
+  function isUserName(value: any): boolean
 }
 
 export default validing
@@ -348,3 +371,5 @@ export declare function isWeixin(value: any): boolean
 export declare function isCarNo(value: any): boolean
 /** 是否中文姓名 */
 export declare function isChineseName(value: any): boolean
+/** 是否用户名 */
+export declare function isUserName(value: any): boolean
