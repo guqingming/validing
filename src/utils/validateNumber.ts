@@ -93,6 +93,9 @@ function isInRange(range: string, number: string) {
 }
 
 function isIndecimal(decimal: number, number = '', strict: boolean) {
+  if (!isString(number)) {
+    number = number.toString()
+  }
   if (decimal === 0) {
     if (number.includes('.')) {
       return false
