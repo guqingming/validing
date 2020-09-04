@@ -39,7 +39,8 @@ import {
   isNo,
   isDate,
   isNoSpecialChart,
-  isIP
+  isIP,
+  isWebSite
 } from './utils/validate'
 
 const Validing = {
@@ -85,7 +86,8 @@ const Validing = {
   isNo,
   isDate,
   isNoSpecialChart,
-  isIP
+  isIP,
+  isWebSite
 }
 
 export default Validing
@@ -113,5 +115,6 @@ export {
   isNo,
   isDate,
   isNoSpecialChart,
-  isIP
+  isIP,
+  isWebSite
 }

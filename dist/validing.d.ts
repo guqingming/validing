@@ -486,6 +486,8 @@ declare module validing {
   function isNoSpecialChart(value: any): boolean
   /** 是否IP地址 */
   function isIP(value: any): boolean
+  /** 是否网址 */
+  function isWebSite(value: any): boolean
 }
 
 export default validing
@@ -536,3 +538,5 @@ export declare function isDate(value: any): boolean
 export declare function isNoSpecialChart(value: any): boolean
 /** 是否IP地址 */
 export declare function isIP(value: any): boolean
+/** 是否网址 */
+export declare function isWebSite(value: any): boolean

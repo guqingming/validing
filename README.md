@@ -56,6 +56,7 @@ validing.isNumber('2.')
 | isDate | 是否日期格式<br>2020-09-04 12:00:00 或 2020-09-04 | value 验证值 | Boolean  |
 | isNoSpecialChart | 是否无特殊字符 | value 验证值 | Boolean  |
 | isIP | 是否IP地址 | value 验证值 | Boolean  |
+| isWebSite | 是否网址 | value 验证值 | Boolean  |
 
 ## el-form中rules使用方法，遵循element-ui中使用规格
 

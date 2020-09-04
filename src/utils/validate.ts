@@ -189,3 +189,10 @@ export function isNoSpecialChart(str: string): boolean {
 export function isIP(str: string): boolean {
   return /^((2[0-4]\d|25[0-5]|[01]?\d\d?)\.){3}(2[0-4]\d|25[0-5]|[01]?\d\d?)$/.test(str)
 }
+
+/**
+ * 是否链接
+ */
+export function isWebSite(path: any): boolean {
+  return /^(https?:|mailto:|tel:)/.test(path)
+}
