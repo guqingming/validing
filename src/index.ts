@@ -11,6 +11,7 @@ import validateCarNo from './utils/validateCarNo'
 import validateChineseName from './utils/validateChineseName'
 import validateUserName from './utils/validateUserName'
 import validatePassword from './utils/validatePassword'
+import validateNo from './utils/validateNo'
 import {
   isBooblean,
   isString,
@@ -30,7 +31,8 @@ import {
   isCarNo,
   isChineseName,
   isUserName,
-  isPassword
+  isPassword,
+  isNo
 } from './utils/validate'
 
 const Validing = {
@@ -47,7 +49,8 @@ const Validing = {
     validateCarNo,
     validateChineseName,
     validateUserName,
-    validatePassword
+    validatePassword,
+    validateNo
   },
   isBooblean,
   isString,
@@ -67,7 +70,8 @@ const Validing = {
   isCarNo,
   isChineseName,
   isUserName,
-  isPassword
+  isPassword,
+  isNo
 }
 
 export default Validing
@@ -91,5 +95,6 @@ export {
   isCarNo,
   isChineseName,
   isUserName,
-  isPassword
+  isPassword,
+  isNo
 }

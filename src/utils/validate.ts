@@ -161,3 +161,10 @@ export function isPassword(value: string, type = 1): boolean {
       return /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,18}$/.test(value)
   }
 }
+
+/**
+ * 验证编码
+ */
+export function isNo(value: string): boolean {
+  return /^[A-Za-z0-9]+$/.test(value)
+}
