@@ -92,7 +92,7 @@ function isInRange(range: string, number: string) {
   return true
 }
 
-function isIndecimal(decimal: number, number: string, strict: boolean) {
+function isIndecimal(decimal: number, number = '', strict: boolean) {
   if (decimal === 0) {
     if (number.includes('.')) {
       return false
