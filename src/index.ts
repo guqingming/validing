@@ -5,6 +5,9 @@ import validateWebsite from './utils/validateWebsite'
 import validateMail from './utils/validateMail'
 import validatePostcode from './utils/validatePostcode'
 import validateIDCardNo from './utils/validateIDCardNo'
+import validateQQ from './utils/validateQQ'
+import validateWinxin from './utils/validateWinxin'
+import validateCarNo from './utils/validateCarNo'
 import {
   isBooblean,
   isString,
@@ -20,7 +23,8 @@ import {
   isPostcode,
   isIDCardNo,
   isQQ,
-  isWeixin
+  isWeixin,
+  isCarNo
 } from './utils/validate'
 
 const Validing = {
@@ -31,7 +35,10 @@ const Validing = {
     validateWebsite,
     validateMail,
     validatePostcode,
-    validateIDCardNo
+    validateIDCardNo,
+    validateQQ,
+    validateWinxin,
+    validateCarNo
   },
   isBooblean,
   isString,
@@ -47,7 +54,8 @@ const Validing = {
   isPostcode,
   isIDCardNo,
   isQQ,
-  isWeixin
+  isWeixin,
+  isCarNo
 }
 
 export default Validing
@@ -67,5 +75,6 @@ export {
   isPostcode,
   isIDCardNo,
   isQQ,
-  isWeixin
+  isWeixin,
+  isCarNo
 }

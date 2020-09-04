@@ -11,20 +11,20 @@ declare module validing {
      * 验证电话号码
      */
     export interface PhoneConfig {
-      /** 
+      /**
        * 是否必填：
        * true 是；
        * false 否(默认)
        **/
       required ? : boolean;
-      /** 
+      /**
        * 电话号码类型：
        * 1 手机号码；
        * 2 座机号码；
        * 3 手机号码or座机号码(默认)
        **/
       type ? : 0 | 1 | 2;
-      /** 
+      /**
        * 字段名称：
        * 此项(默认)
        **/
@@ -39,7 +39,7 @@ declare module validing {
      * 验证数字或金额
      */
     export interface NumberConfig {
-      /** 
+      /**
        * 是否必填：
        * true 是；
        * false 否(默认)
@@ -52,7 +52,7 @@ declare module validing {
        * 小数在前，大数在后
        */
       range ? : string;
-      /** 
+      /**
        * 小数位数：
        * 0(默认)
        **/
@@ -64,7 +64,7 @@ declare module validing {
        * 严格模式时要求的小数位数必须补齐
        */
       strict ? : boolean;
-      /** 
+      /**
        * 字段名称：
        * 此项(默认)
        **/
@@ -79,13 +79,13 @@ declare module validing {
      * 验证首尾是否含有空格
      */
     export interface SpaceConfig {
-      /** 
+      /**
        * 是否必填：
        * true 是；
        * false 否(默认)
        **/
       required ? : boolean;
-      /** 
+      /**
        * 字段名称：
        * 此项(默认)
        **/
@@ -100,7 +100,7 @@ declare module validing {
      * 验证是否有效网址
      */
     export interface WebsiteConfig {
-      /** 
+      /**
        * 是否必填：
        * true 是；
        * false 否(默认)
@@ -110,7 +110,7 @@ declare module validing {
        * 允许的网站协议
        */
       protocols ? : ('http' | 'https' | 'ftp' | 'sftp' | 'mailto' | 'tel')[];
-      /** 
+      /**
        * 字段名称：
        * 此项(默认)
        **/
@@ -125,7 +125,7 @@ declare module validing {
      * 验证邮箱地址
      */
     export interface MailConfig {
-      /** 
+      /**
        * 是否必填：
        * true 是；
        * false 否(默认)
@@ -135,7 +135,7 @@ declare module validing {
        * 字符串长度
        */
       maxLength ? : number;
-      /** 
+      /**
        * 字段名称：
        * 此项(默认)
        **/
@@ -150,13 +150,13 @@ declare module validing {
      * 验证邮政编码
      */
     export interface PostcodeConfig {
-      /** 
+      /**
        * 是否必填：
        * true 是；
        * false 否(默认)
        **/
       required ? : boolean;
-      /** 
+      /**
        * 字段名称：
        * 此项(默认)
        **/
@@ -171,20 +171,20 @@ declare module validing {
      * 验证身份证号码
      */
     export interface IDCardNoConfig {
-      /** 
+      /**
        * 是否必填：
        * true 是；
        * false 否(默认)
        **/
       required ? : boolean;
-      /** 
+      /**
        * 身份证号码类型：
        * 1 1代15位；
        * 2 2代18位；
        * 3 1代or2代(默认)
        **/
       type ? : 0 | 1 | 2;
-      /** 
+      /**
        * 字段名称：
        * 此项(默认)
        **/
@@ -199,13 +199,13 @@ declare module validing {
      * 验证QQ号
      */
     export interface QQConfig {
-      /** 
+      /**
        * 是否必填：
        * true 是；
        * false 否(默认)
        **/
       required ? : boolean;
-      /** 
+      /**
        * 字段名称：
        * 此项(默认)
        **/
@@ -220,13 +220,13 @@ declare module validing {
      * 验证微信号
      */
     export interface WeixinConfig {
-      /** 
+      /**
        * 是否必填：
        * true 是；
        * false 否(默认)
        **/
       required ? : boolean;
-      /** 
+      /**
        * 字段名称：
        * 此项(默认)
        **/
@@ -236,6 +236,27 @@ declare module validing {
      * 验证身份证号码
      */
     export function validateWeixin(config: WeixinConfig): any;
+
+    /**
+     * 验证车牌号码
+     */
+    export interface CarNoConfig {
+      /**
+       * 是否必填：
+       * true 是；
+       * false 否(默认)
+       **/
+      required ? : boolean;
+      /**
+       * 字段名称：
+       * 此项(默认)
+       **/
+      name ? : string;
+    }
+    /**
+     * 验证身份证号码
+     */
+    export function validateCarNo(config: CarNoConfig): any;
   }
 
   /** 是否布尔值 */
