@@ -368,6 +368,27 @@ declare module validing {
      * 验证日期
      */
     export function validateDate(config: DateConfig): any;
+
+    /**
+     * 验证无特殊字符
+     */
+    export interface NoSpecialChartConfig {
+      /**
+       * 是否必填：
+       * true 是；
+       * false 否(默认)
+       **/
+      required ? : boolean;
+      /**
+       * 错误提示：
+       * 默认按情况提示相应错误
+       **/
+      tip ? : string;
+    }
+    /**
+     * 验证无特殊字符
+     */
+    export function validateNoSpecialChart(config: NoSpecialChartConfig): any;
   }
 
   /** 是否布尔值 */
@@ -410,6 +431,8 @@ declare module validing {
   function isNo(value: any): boolean
   /** 是否日期 */
   function isDate(value: any): boolean
+  /** 是否无特殊字符 */
+  function isNoSpecialChart(value: any): boolean
 }
 
 export default validing
@@ -454,3 +477,5 @@ export declare function isPassword(value: any, type: 1 | 2): boolean
 export declare function isNo(value: any): boolean
 /** 是否日期 */
 export declare function isDate(value: any): boolean
+/** 是否无特殊字符 */
+export declare function isNoSpecialChart(value: any): boolean

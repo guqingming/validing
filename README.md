@@ -53,6 +53,7 @@ validing.isNumber('2.')
 | isPassword | 是否密码 | value 验证值<br>type 类型<br>    1 弱(以字母开头，长度在6~18之间，只能包含字母、数字和下划线)<br>    2 强(必须包含大小写字母和数字的组合，不能使用特殊字符，长度在6-18之间) | Boolean  |
 | isNo | 是否编码<br>数字英文的组合 | value 验证值 | Boolean  |
 | isDate | 是否日期格式<br>2020-09-04 12:00:00 或 2020-09-04 | value 验证值 | Boolean  |
+| isNoSpecialChart | 是否无特殊字符 | value 验证值 | Boolean  |
 
 ## el-form中rules使用方法，遵循element-ui中使用规格
 
@@ -138,5 +139,7 @@ rules = {
 | validateNo | 验证编码<br>数字和英文的组合 | required | 是否必填 | Boolean | false |
 | | | tip | 错误提示 | String | 按情景提示具体错误 |
 | validateDate | 验证日期<br>2020-09-04 12:00:00 或 2020-09-04 | required | 是否必填 | Boolean | false |
+| | | tip | 错误提示 | String | 按情景提示具体错误 |
+| validateNoSpecialChart | 验证无特殊字符 | required | 是否必填 | Boolean | false |
 | | | tip | 错误提示 | String | 按情景提示具体错误 |
 

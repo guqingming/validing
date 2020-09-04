@@ -175,3 +175,10 @@ export function isNo(value: string): boolean {
 export function isDate(value: string): boolean {
   return /^\d{4}(-\d{1,2}){2}( \d{1,2}(:\d{1,2}){2})?$/.test(value)
 }
+
+/**
+ * 验证无特殊字符
+ */
+export function isNoSpecialChart(str: string): boolean {
+  return /^[a-zA-Z0-9\u4e00-\u9fa5]+$/.test(str)
+}
