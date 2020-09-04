@@ -35,16 +35,12 @@ const validateMail = (config: validing.rules.MailConfig) => {
     } = Object.assign(defaultConfig, getValueObject(config))
     if (!config.required && !isHaveValue(value)) {
       callback()
-      return
     } else if (!isHaveValue(value)) {
       callback(new Error(`${ theConfig.name }必填`))
-      return
     } else if (!(isEmail(value))) {
       callback(new Error(`${ theConfig.name }格式错误`))
-      return
     } else if (value.length > theConfig.maxLength) {
       callback(new Error(`${ theConfig.name }长度不能大于${ theConfig.maxLength }`))
-      return
     } else {
       callback()
     }

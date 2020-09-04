@@ -25,13 +25,10 @@ const validateSpace = (config: validing.rules.SpaceConfig) => {
     } = Object.assign(defaultConfig, getValueObject(config))
     if (!config.required && !isHaveValue(value)) {
       callback()
-      return
     } else if (!isHaveValue(value)) {
       callback(new Error(`${ theConfig.name }必填`))
-      return
     } else if (isHaveSpace(value)) {
       callback(new Error(`${ theConfig.name }首尾不能有空格`))
-      return
     } else {
       callback()
     }

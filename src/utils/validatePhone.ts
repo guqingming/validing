@@ -30,19 +30,14 @@ const validatePhone = (config: validing.rules.PhoneConfig) => {
     } = Object.assign(defaultConfig, getValueObject(config))
     if (!config.required && !isHaveValue(value)) {
       callback()
-      return
     } else if (!isHaveValue(value)) {
       callback(new Error(`${ theConfig.name }必填`))
-      return
     } else if (!isPhoneNumber(value) && theConfig.type === 1) {
       callback(new Error(`${ theConfig.name }格式错误`))
-      return
     } else if (!isFixedNumber(value) && theConfig.type === 2) {
       callback(new Error(`${ theConfig.name }格式错误`))
-      return
     } else if (!isPhoneNumber(value) && !isFixedNumber(value) && theConfig.type === 0) {
       callback(new Error(`${ theConfig.name }格式错误`))
-      return
     } else {
       callback()
     }

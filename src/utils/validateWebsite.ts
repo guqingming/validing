@@ -38,13 +38,10 @@ const validateWebsite = (config: validing.rules.WebsiteConfig) => {
     } = Object.assign(defaultConfig, getValueObject(config))
     if (!config.required && !isHaveValue(value)) {
       callback()
-      return
     } else if (!isHaveValue(value)) {
       callback(new Error(`${ theConfig.name }必填`))
-      return
     } else if (!theConfig.protocols.some(item => isStartStr(value, `${ item }:`))) {
       callback(new Error(`${ theConfig.name }外部网址格式错误`))
-      return
     } else {
       callback()
     }

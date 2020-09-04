@@ -37,18 +37,14 @@ const validateNumber = (config: validing.rules.NumberConfig) => {
     } = Object.assign(defaultConfig, getValueObject(config))
     if (!config.required && !isHaveValue(value)) {
       callback()
-      return
     } else if (!isHaveValue(value)) {
       callback(new Error(`${ theConfig.name }必填`))
-      return
     } else if (!isNumber(value)) {
       callback(new Error(`${ theConfig.name }不是有效的数字`))
     } else if (!isInRange(theConfig.range, value)) {
       callback(new Error(`${ theConfig.name }超出了允许的数值范围`))
-      return
     } else if (!isIndecimal(theConfig.decimal, value, theConfig.strict)) {
       callback(new Error(`${ theConfig.name }小数位数错误`))
-      return
     } else {
       callback()
     }

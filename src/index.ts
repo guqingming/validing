@@ -5,7 +5,23 @@ import validateWebsite from './utils/validateWebsite'
 import validateMail from './utils/validateMail'
 import validatePostcode from './utils/validatePostcode'
 import validateIDCardNo from './utils/validateIDCardNo'
-import { isBooblean, isString, isHaveValue, isPhoneNumber, isNumber, isArray, isRangeNumber, isDecimal, isStartStr, isEndStr, isEmail, isPostcode, isIDCardNo } from './utils/validate'
+import {
+  isBooblean,
+  isString,
+  isHaveValue,
+  isPhoneNumber,
+  isNumber,
+  isArray,
+  isRangeNumber,
+  isDecimal,
+  isStartStr,
+  isEndStr,
+  isEmail,
+  isPostcode,
+  isIDCardNo,
+  isQQ,
+  isWeixin
+} from './utils/validate'
 
 const Validing = {
   rules: {
@@ -29,7 +45,9 @@ const Validing = {
   isEndStr,
   isEmail,
   isPostcode,
-  isIDCardNo
+  isIDCardNo,
+  isQQ,
+  isWeixin
 }
 
 export default Validing
@@ -47,5 +65,7 @@ export {
   isEndStr,
   isEmail,
   isPostcode,
-  isIDCardNo
+  isIDCardNo,
+  isQQ,
+  isWeixin
 }

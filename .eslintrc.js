@@ -12,6 +12,9 @@ module.exports = {
     '@vue/typescript'
   ],
   rules: {
+    "@typescript-eslint/no-unused-vars": [
+      "error"
+    ],
     "vue/max-attributes-per-line": [2, {
       "singleline": 10,
       "multiline": {
@@ -19,6 +22,9 @@ module.exports = {
         "allowFirstLine": false
       }
     }],
+    "vue/no-unused-components": "error",
+    "vue/no-unused-vars": "error",
+    "no-unused-vars": "error",
     "vue/singleline-html-element-content-newline": "off",
     "vue/multiline-html-element-content-newline":"off",
     "vue/name-property-casing": ["error", "PascalCase"],

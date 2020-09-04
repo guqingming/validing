@@ -114,3 +114,17 @@ export function isIDCardNo(value: string, type = 0): boolean {
       return /^(^\d{18}$|^\d{17}(\d|X|x))$/.test(value)
   }
 }
+
+/**
+ * 验证QQ
+ */
+export function isQQ(value: string): boolean {
+  return /^[1-9][0-9]{4,10}$/.test(value)
+}
+
+/**
+ * 验证微信号
+ */
+export function isWeixin(value: string): boolean {
+  return /^[a-zA-Z]([-_a-zA-Z0-9]{5,19})+$/.test(value)
+}

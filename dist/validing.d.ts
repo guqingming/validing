@@ -194,6 +194,48 @@ declare module validing {
      * 验证身份证号码
      */
     export function validateIDCardNo(config: IDCardNoConfig): any;
+
+    /**
+     * 验证QQ号
+     */
+    export interface QQConfig {
+      /** 
+       * 是否必填：
+       * true 是；
+       * false 否(默认)
+       **/
+      required ? : boolean;
+      /** 
+       * 字段名称：
+       * 此项(默认)
+       **/
+      name ? : string;
+    }
+    /**
+     * 验证身份证号码
+     */
+    export function validateQQ(config: QQConfig): any;
+
+    /**
+     * 验证微信号
+     */
+    export interface WeixinConfig {
+      /** 
+       * 是否必填：
+       * true 是；
+       * false 否(默认)
+       **/
+      required ? : boolean;
+      /** 
+       * 字段名称：
+       * 此项(默认)
+       **/
+      name ? : string;
+    }
+    /**
+     * 验证身份证号码
+     */
+    export function validateWeixin(config: WeixinConfig): any;
   }
 
   /** 是否布尔值 */
@@ -220,6 +262,10 @@ declare module validing {
   function isPostcode(value: any): boolean
   /** 是否身份证号码 */
   function isIDCardNo(value: any): boolean
+  /** 是否QQ号 */
+  function isQQ(value: any): boolean
+  /** 是否微信号 */
+  function isWeixin(value: any): boolean
 }
 
 export default validing
@@ -248,3 +294,7 @@ export declare function isEmail(value: any): boolean
 export declare function isPostcode(value: any): boolean
 /** 是否身份证号码 */
 export declare function isIDCardNo(value: any): boolean
+/** 是否QQ号 */
+export declare function isQQ(value: any): boolean
+/** 是否微信号 */
+export declare function isWeixin(value: any): boolean

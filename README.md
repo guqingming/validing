@@ -45,6 +45,8 @@ validing.isNumber('2.')
 | isEmail | 是否邮箱 | value 验证值 | Boolean  |
 | isPostcode | 是否邮编 | value 验证值 | Boolean  |
 | isIDCardNo | 是否身份证号码 | value 验证值<br>type 类型<br>    0 一代或二代<br>    1 一代<br>    2 二代(默认值) |Boolean|
+| isQQ | 是否QQ号 | value 验证值 | Boolean  |
+| isWeixin | 是否微信号 | value 验证值 | Boolean  |
 
 ## el-form中rules使用方法，遵循element-ui中使用规格
 
@@ -113,5 +115,9 @@ rules = {
 | | | name | 字段名称 | String | 此项 |
 | validateIDCardNo | 验证身份证号码 | required | 是否必填 | Boolean | false |
 | | | type | 身份证号码类型 | Number<br>    0 一代或二代<br>    1 一代<br>    2 二代 | 0 |
+| | | name | 字段名称 | String | 此项 |
+| validateQQ | 验证QQ号 | required | 是否必填 | Boolean | false |
+| | | name | 字段名称 | String | 此项 |
+| validateWeixin | 验证微信号 | required | 是否必填 | Boolean | false |
 | | | name | 字段名称 | String | 此项 |
 

@@ -25,13 +25,10 @@ const validatePostcode = (config: validing.rules.PostcodeConfig) => {
     } = Object.assign(defaultConfig, getValueObject(config))
     if (!config.required && !isHaveValue(value)) {
       callback()
-      return
     } else if (!isHaveValue(value)) {
       callback(new Error(`${ theConfig.name }必填`))
-      return
     } else if (!(isPostcode(value))) {
       callback(new Error(`${ theConfig.name }格式错误`))
-      return
     } else {
       callback()
     }
