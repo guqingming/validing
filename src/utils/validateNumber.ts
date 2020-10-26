@@ -103,6 +103,8 @@ function isIndecimal(decimal: number, number = '', strict: boolean) {
   } else {
     if (!strict && !number.includes('.')) {
       return true
+    } else if (!strict && number.toString().split('.')[1].length <= decimal) {
+      return true
     } else if (!isDecimal(number, decimal)) {
       return false
     }
