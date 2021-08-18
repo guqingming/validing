@@ -40,7 +40,7 @@ export function isPhoneNumber(value: any): boolean {
  * 验证固定电话
  */
 export function isFixedNumber(value: any): boolean {
-  return /^0\d{2,3}-\d{7,8$}/.test(value)
+  return /^0\d{2,3}-\d{7,8}$/.test(value)
 }
 
 /**
